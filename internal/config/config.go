@@ -2,6 +2,7 @@ package config
 
 import (
 	"log"
+	"os"
 	"time"
 
 	"github.com/ilyakaznacheev/cleanenv"
@@ -29,7 +30,11 @@ type server struct {
 	HttpReadTimeOut  time.Duration `env:"HTTP_READ_TIMEOUT"`
 }
 
-func LoadConfig(path string) *Config {
+func LoadConfig() *Config {
+	path := os.Getenv("ENV_PATH")
+	if path == "" {
+		path = ".env"
+	}
 	var cfg Config
 	err := cleanenv.ReadConfig(path, &cfg)
 	if err != nil {

@@ -26,7 +26,7 @@ type App struct {
 }
 
 func InitApp() *App {
-	cfg := config.LoadConfig(".env")
+	cfg := config.LoadConfig()
 	logger := logger.InitLogger()
 	pool, err := store.NewConnection(cfg)
 	if err != nil {

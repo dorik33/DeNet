@@ -32,6 +32,8 @@ services:
     container_name: 'denet'
     ports:
       - "${HTTP_PORT}:${HTTP_PORT}"
+    environment:
+      ENV_PATH: /app/.env 
     depends_on:
       postgres:
         condition: service_healthy
