@@ -13,7 +13,7 @@
 
 ## Тестирование
 ### -POST /register
-![image](https://github.com/user-attachments/assets/d4f7b1cd-1ba6-474d-81d8-f3e82419083a)
+![image](https://github.com/user-attachments/assets/909fb895-93ea-4762-b68b-cac47c278480)
 
 ### -POST /login
 ![image](https://github.com/user-attachments/assets/d414cc84-ff92-4f6d-bc88-d05792f9fef1)
